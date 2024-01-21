@@ -17,7 +17,7 @@ function Habit({ habitName }) {
       <span
         style={{
           margin: 8,
-          textDecoration: isChecked ? "line-through" : "none"
+          textDecoration: isChecked ? "line-through" : "none",
         }}
       >
         {habitName}
@@ -33,7 +33,7 @@ function DateBar({ initialDate }) {
     const formatter = new Intl.DateTimeFormat("en-US", {
       month: "short",
       day: "2-digit",
-      year: "numeric"
+      year: "numeric",
     });
     return formatter.format(date);
   }
@@ -57,6 +57,7 @@ export default function MyApp() {
       <Habit habitName="Sleep early" />
       <Habit habitName="Exercise" />
       <Habit habitName="Meditate" />
+      <Habit habitName="Read 10 pages" />
     </div>
   );
 }
